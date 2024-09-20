@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+<title>製程和設備 Quality：竣碩事業群 Jushuo Group Ltd.</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"  />
+<meta property="og:title" content="竣碩事業群 Jushuo Group Ltd."/>
+<meta property="og:site_name" content="竣碩事業群 Jushuo Group Ltd."/>
+<meta property="og:type" content="website">
+<link href="/res/images/js.ico" rel="shortcut icon" />
+<meta content="竣碩事業群從事矽膠（Silicone，亦稱「硅膠」）、橡膠（Rubber）、塑膠（Plastic），及其複合材料開發應用，並協助開發各種生產模具、治具，業務範圍囊括汽車零組件、工業用零件、手機、電腦、平板電腦、家電、環保產品、婦幼用品等領域。" name="description" />
+<meta content="竣碩有限公司,昆山鉅碩電子有限公司,重慶揚碩電子有限公司" name="keywords" />
+<meta name="google-site-verification" content="" />
+<meta name="msvalidate.01" content="" />
+<meta property="fb:pages" content="1406050256286279" />
+<script src="res/js/jquery.1.8.2.js" type="text/javascript"></script>
+<script src="res/js/jquery.iosslider.js" type="text/javascript"></script>
+<meta property="og:url" content="http://www.jsilica.com"/>
+<meta property="og:image" content=""/>
+<style>
+body{margin:0px;padding:0px;font-family:"Arial";height:100%;width:1920px;background-color: #FFF;}
+p{line-height: 200%;}
+#logo{float:left;margin:10px 50px;}
+#logo img{height: 100px;}
+#menu{float:right;margin:50px 50px 0px;overflow: hidden;}
+#menu li{float:left;margin:10px 30px;}
+#menu li a{color:#000;text-decoration: none;}
+ul, li{margin: 0px;padding: 0px;list-style-type: none;cursor: pointer;}
+.space{height:1px;clear: both;}
+#next{position: absolute;z-index: 99;right:50px;top:555px;cursor: pointer;}
+#prev{position: absolute;z-index: 99;left:50px;top:555px;cursor: pointer;}
+#slides { position: relative; top: 0; left: 0; overflow: hidden; width:1920px;height:920px; }
+#slides .slider {width: 100%;height: 100%;}
+#slides .slider .slide {float: left;width:1920px;height:920px;}
+#slides2 { position: relative; top: 0; left: 0; overflow: hidden; width:1920px;height:600px; }
+#slides2 .slider {width: 100%;height: 100%;}
+#slides2 .slider .slide {float: left;width:1920px;height:600px;}
+#slides2 img{width:1920px;height:600px;}
+h1{margin:50px;text-align: center;font-size:30px;letter-spacing: 4px;}
+.block{width: 1200px; margin:50px auto 0px;text-align: center;}
+.span4{width: 370px;float: left;min-height: 1px;margin-left: 30px;}
+.service-box.type_1{padding: 72px 28px 10px;margin-bottom: 48px;}
+.title{margin-left:30px;text-align:center;font-size:28px;letter-spacing:2px;}
+.space{height:1px;clear: both;}
+.block2{width: 100%; margin:0px auto;padding:0px 0px 0px;text-align: center;border-top:0px solid #ccc; border-bottom:1px solid #ccc; }
+#contact{}
+.title2{color: #595757;}
+#footer{padding:20px 0px; text-align: center;}
+.h2{width:100%;float: left;text-align: center;}
+.b1{padding:0px;text-align: center;font-size: 26px;color:#555; letter-spacing: 2px;}
+.b2{width: 90%;margin:20px auto 10px;line-height: 180%;font-size: 19px;text-align: left;}
+.b3{width:150px;border-bottom: 5px solid #E50012;margin:-20px auto 0px;}
+.certli{float: left;margin: 10px 30px;}
+.b4{width:920px;height:100px;clear: both;margin:10px auto;}
+#blackwindow{top:0px;left: 0px;position: fixed;right: 0px;bottom: 0px;background: rgba(0,0,0,0.7);z-index: 99;display: none;}
+#featureimg{width: 100%;height:100%;text-align: center;}
+#next{position: fixed;z-index: 100;right:50px;top:555px;cursor: pointer;}
+#prev{position: fixed;z-index: 100;left:50px;top:555px;cursor: pointer;}
+.h3{width: 960px;margin: 10px auto;}
+.h4{width: 960px;margin: 10px auto;}
+.h3 li{float: left;margin:10px;width:300px;height: 300px;overflow: hidden;}
+.h4 li{float: left;margin:10px;}
+</style>
+<script>
+$(document).ready(function(){
+	var w = $(window).width();
+        var z = w/1920;
+        $("body").css({zoom:z});
+    $('.cert').each(function(){
+	    $(this).click(function(){
+		    $("#blackwindow").show();
+		    var src = $(this).find("img").attr("datasrc");
+		    var num = $(this).find("img").attr("num");
+		    if(num==1)
+		    $("#prev").hide();
+		    if(num==8)
+		    $("#next").hide();
+		    $(".featureimg").attr("src","res/images/cert/"+src);
+		    var h = parseInt($(".featureimg").height())*z;
+		    var wh = parseInt($(window).height());
+		    var bh = parseInt($("#blackwindow").height());
+		    console.log(h,wh);
+		    $(".featureimg").css({margin:(bh-840)/2+"px auto"}).attr("num",num);
+			$("#next").css({top:(bh-70)/2+"px"});
+			$("#prev").css({top:(bh-70)/2+"px"});
+	    });
+    });
+     $("#blackwindow").click(function(e){
+	    $("#blackwindow").fadeOut(1000);
+	    $("#next").show();
+	    $("#prev").show();
+    });
+    $("#next").click(function(e){
+	    e.stopPropagation();
+	    var num = parseInt($(".featureimg").attr("num"));
+	    $(".featureimg").hide();
+	    $(".featureimg").attr("src","res/images/cert/b"+(num+1)+".png").attr("num",num+1).fadeIn(1500);
+	    if((num+1)==8)
+	    $("#next").hide();
+	    else
+	    $("#next").show();
+	    if((num+1)==2)
+	    $("#prev").show();
+    });
+    $("#prev").click(function(e){
+	    e.stopPropagation();
+	    var num = parseInt($(".featureimg").attr("num"));
+	    $(".featureimg").hide();
+	    $(".featureimg").attr("src","res/images/cert/b"+(num-1)+".png").attr("num",num-1).fadeIn(1500);
+	    if((num-1)==1)
+	    $("#prev").hide();
+	    else
+	    $("#prev").show();
+	    if((num-1)==7)
+	     $("#next").show();
+    });    
+});
+</script>
+</head>
+<body>
+<div id="header">
+<div id="header">
+	<div id="logo"><a href="http://www.jsilica.com"><img src="res/images/js_logo2.png"></a></div>
+	<div style="float:left;margin:50px 20px 0px 20px;"><a href="http://www.jsilica.com/index.html" style="color:black">中文</a> | <a href="http://www.jsilica.com/index_en.html" style="color:black">English</a></div>
+	<div id="menu">
+		<ul>
+		<li><a href="http://www.jsilica.com">HOME</a></li>
+		<li><a href="http://www.jsilica.com/about.html">ABOUT</a></li>
+		<li><a href="http://www.jsilica.com/quality.html">QUALITY</a></li>
+		<li><a href="http://www.jsilica.com/customer.html">CUSTOMER</a></li>
+		<li><a href="http://www.jsilica.com/product.html">PRODUCT</a></li>
+		<li><a href="http://www.jsilica.com/contact.html">CONTACT</a></li>
+		</ul>
+	</div>
+	<div class="space"></div>
+</div>
+<div id="main">
+	<div><img src="res/images/quality.png"></div>
+</div>
+<div class="block2">
+	<div class="block">
+		<div class="h2">
+			<div class="b1"><figure class="icon"><img src="res/images/quality01.png" alt=""></figure></div>
+			<div class="b2">生產管理採團隊績效與個人績效並進，於看板隨時記錄生產進度與排程，有效掌握工作各環節，空間規劃機動性良好之產線，生產過程透明化，活用顏色管理，以直覺式顏色區隔生產環境。協助團隊同仁全力達成每月產能最低25萬模次、廢品重量低於領料重量8%之產能目標。</div>
+		</div>
+		<div class="h2">
+				<div class="b4">
+					<ul>
+						<li class="certli"><div class="cert"><img num="1" src="res/images/cert/b1-s.png" datasrc="b1.png"></div></li>
+						<li class="certli"><div class="cert"><img num="2" src="res/images/cert/b2-s.png" datasrc="b2.png"></div></li>
+						<li class="certli"><div class="cert"><img num="3" src="res/images/cert/b3-s.png" datasrc="b3.png"></div></li>
+						<li class="certli"><div class="cert"><img num="4" src="res/images/cert/b4-s.png" datasrc="b4.png"></div></li>
+					</ul>
+				</div>
+				<div class="b4">
+					<ul>
+						<li class="certli"><div class="cert"><img num="5" src="res/images/cert/b5-s.png" datasrc="b5.png"></div></li>
+						<li class="certli"><div class="cert"><img num="6" src="res/images/cert/b6-s.png" datasrc="b6.png"></div></li>
+						<li class="certli"><div class="cert"><img num="7" src="res/images/cert/b7-s.png" datasrc="b7.png"></div></li>
+						<li class="certli"><div class="cert"><img num="8" src="res/images/cert/b8-s.png" datasrc="b8.png"></div></li>
+					</ul>
+				</div>
+		</div>
+		<div class="space"></div>
+	</div>
+</div>
+<div class="block2">
+	<div class="block">
+		<div class="h2">
+			<div class="b1"><figure class="icon"><img src="res/images/quality02.png" alt=""></figure></div>
+			<div class="b2">我們擁有多種250噸至400噸的真空成型機（Vacuum Forming Machine），能利用設備的超高效能與超高精度，製作更種精密尺寸的產品。為了讓橡膠產品具備更好的硫化過程，我們配備效能良好的平板硫化機（Compression Machine），滿足特殊膠料的工藝要求。此外包括混煉機、原料裁切機、電子式切膠機、自動拆邊機等等設備，都讓我們的生產效能更加提昇，滿足客戶對於產品規格化的要求。</div>
+		</div>
+		<div class="h2">
+			<ul class="h3">
+			<li><img src="res/images/quality/m01.png" ></li>
+			<li><img src="res/images/quality/m02.png" ></li>
+			<li><img src="res/images/quality/m03.png" ></li>
+			<li><img src="res/images/quality/m04.png" ></li>
+			<li><img src="res/images/quality/m05.png" ></li>
+			<li><img src="res/images/quality/m06.png" ></li>
+			<li><img src="res/images/quality/m07.png" ></li>
+			<li><img src="res/images/quality/m08.png" ></li>
+			<li><img src="res/images/quality/m09.png" ></li>						
+			</ul>
+		</div>
+		<div class="space"></div>
+	</div>
+</div>
+<div class="block2">
+	<div class="block">
+		<div class="h2">
+			<div class="b1"><figure class="icon"><img src="res/images/quality03.png" alt=""></figure></div>
+			<div class="b2">我們擁有多項檢測設備，「ROHS有害物質檢測儀」能夠快速檢驗出有害物質，來確保產品的品質，可測試Cd、Pb、AS、Br、Cr、Hg、Cl等物質。「荷重／曲線儀」應用於案件類的荷重、行程、手感測試，與背膠類剝落力測試等。「RCA耐磨測試機」，適用於手機按鍵印字，手機外殼、塑料外殼塗層等耐磨性能測試。「橡皮摩擦測試機」，利用橡皮的研磨性，使印刷、塗裝部品的耐磨性強度，可以更快、更簡便地判定。</div>
+		</div>
+		<div class="h2">
+			<ul class="h4">
+			<li><img src="res/images/quality/m10.png" style="width:650px;height:300px;"></li>
+			<li><img src="res/images/quality/m11.png" style=""></li>
+			<li><img src="res/images/quality/m12.png" style=""></li>
+			<li><img src="res/images/quality/m13.png" style=""></li>
+			</ul>
+		</div>
+		<div class="space"></div>
+	</div>
+</div>
+<div id="footer">竣碩事業群 JS Group Ltd. / All Rights Reserved.</div>
+<div id="blackwindow">
+	<div id="featureimg"><img num="" class="featureimg" src="res/images/cert/b1.png"></div>
+		<div id="next"><img src="res/images/next.png"></div>
+		<div id="prev"><img src="res/images/prev.png"></div>
+</div>
+</body>
+</html>
